@@ -223,8 +223,12 @@ const C={
  mapQuery:"Hotel Sunshine Grand, Gorakhpur",
  dirLink:"https://maps.app.goo.gl/DejYRT1WoHSEc3tP8",
  whatsapp:"918369609172",phone:"+918369609172",
- music:"",   /* optional: URL of your own .mp3. Leave empty to use the built-in soft melody */
- photos:[1,2,3,4,5].map(i=>`https://picsum.photos/seed/engage${i}/600/800`)   /* replace with your own photo links */
+ music:"download.mp3",   /* optional: URL of your own .mp3. Leave empty to use the built-in soft melody */
+ photos:["1.webp",
+  "2.webp",
+  "3.webp",
+  "4.webp",
+  "5.webp"]   /* replace with your own photo links */
 };
 /* =================================== */
 const $=s=>document.querySelector(s),D=new Date(C.date),R=(a,b)=>a+Math.random()*(b-a);
