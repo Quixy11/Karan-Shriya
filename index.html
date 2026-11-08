@@ -6,7 +6,7 @@
 <title>Karan &amp; Shriya · Engagement Invitation</title>
 <meta name="theme-color" content="#f6e3dc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--blush:#f8e7e0;--ivory:#fffaf5;--rose:#c9566b;--gold:#b98a4a;--plum:#4a2530;
 --script:'Pinyon Script','Snell Roundhand',cursive;--serif:'Cormorant Garamond',Georgia,serif}
@@ -61,7 +61,7 @@ section{min-height:100svh;display:flex;flex-direction:column;align-items:center;
 @keyframes fup{from{opacity:0;transform:translateY(18px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 .heart-i{color:var(--rose);font-size:1.6rem;animation:beat 1.6s infinite}
 @keyframes beat{15%{transform:scale(1.3)}30%{transform:scale(1)}}
-.name{position:relative;font-family:var(--script);font-size:clamp(3.8rem,19vw,5.2rem);line-height:1.1;color:var(--plum);text-shadow:0 0 0 rgba(224,164,88,0)}
+.name{position:relative;font-family:'Great Vibes',cursive;font-size:clamp(3.8rem,19vw,5.2rem);line-height:1.3;color:var(--plum);text-shadow:0 0 0 rgba(224,164,88,0)}
 .name span{display:inline-block;opacity:0}
 .shown .name span{animation:ltr 2s var(--d) both cubic-bezier(.2,.8,.2,1)}
 @keyframes ltr{0%{opacity:0;filter:blur(16px);transform:translateY(34px) scale(1.7) rotate(9deg)}60%{opacity:1;text-shadow:0 0 24px rgba(224,164,88,.9)}100%{opacity:1;filter:none;transform:none;text-shadow:0 0 10px rgba(224,164,88,.25)}}
@@ -81,8 +81,8 @@ section{min-height:100svh;display:flex;flex-direction:column;align-items:center;
 .scroll{margin-top:1rem;font-size:.85rem;letter-spacing:.2em;opacity:.7;animation:bob 1.8s infinite}
 @keyframes bob{50%{transform:translateY(8px)}}
 /* scratch */
-.sc{position:relative;width:240px;height:216px;margin:.6rem 0;touch-action:none}
-.sc svg,.sc canvas{position:absolute;inset:0;width:240px;height:216px}
+.sc{position:relative;width:300px;height:270px;margin:.6rem 0;touch-action:none}
+.sc svg,.sc canvas{position:absolute;inset:0;width:300px;height:270px}
 .sc .txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:18px}
 .sc .txt b{font-size:1.5rem}
 .sc canvas{cursor:grab;transition:opacity 1.2s}
@@ -172,7 +172,7 @@ footer{padding:20px 0 60px;text-align:center;font-style:italic;opacity:.75}
       <svg viewBox="0 0 200 180"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaf5"/><stop offset="1" stop-color="#f7d9d4"/></linearGradient></defs>
       <path d="M100 171C-20 99 10 4 100 54 190 4 220 99 100 171Z" fill="url(#hg)" stroke="#b98a4a" stroke-width="1.5"/></svg>
       <div class="txt"><span class="sub">You’re invited</span><b id="dDate"></b><span id="dTime" class="sub"></span></div>
-      <canvas id="sk" width="240" height="216"></canvas>
+      <canvas id="sk" width="300" height="270"></canvas>
     </div>
     <div class="row rv"><button class="btn" id="cal">SAVE THE DATE</button></div>
   </section>
@@ -299,17 +299,18 @@ const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
 /* scratch */
+/* scratch */
 const sk=$('#sk'),g=sk.getContext('2d');
 const heart=(c,w,h)=>{c.beginPath();c.moveTo(w/2,h*.95);c.bezierCurveTo(-w*.1,h*.55,w*.05,h*.02,w/2,h*.3);c.bezierCurveTo(w*.95,h*.02,w*1.1,h*.55,w/2,h*.95);c.closePath()};
-heart(g,240,216);g.save();g.clip();
-const gr=g.createLinearGradient(0,0,240,216);gr.addColorStop(0,'#e7a9b4');gr.addColorStop(.5,'#f5cfd0');gr.addColorStop(1,'#d58395');g.fillStyle=gr;g.fillRect(0,0,240,216);
-for(let i=0;i<260;i++){g.fillStyle=`rgba(255,255,255,${R(.2,.7)})`;g.fillRect(R(0,240),R(0,216),R(1,2.5),R(1,2.5))}
-g.restore();g.fillStyle='rgba(255,255,255,.9)';g.font='italic 17px Georgia,serif';g.textAlign='center';g.fillText('scratch here',120,115);
-g.strokeStyle='#b98a4a';g.lineWidth=2;heart(g,240,216);g.stroke();
+heart(g,300,270);g.save();g.clip();
+const gr=g.createLinearGradient(0,0,300,270);gr.addColorStop(0,'#e7a9b4');gr.addColorStop(.5,'#f5cfd0');gr.addColorStop(1,'#d58395');g.fillStyle=gr;g.fillRect(0,0,300,270);
+for(let i=0;i<320;i++){g.fillStyle=`rgba(255,255,255,${R(.2,.7)})`;g.fillRect(R(0,300),R(0,270),R(1,2.5),R(1,2.5))}
+g.restore();g.fillStyle='rgba(255,255,255,.9)';g.font='italic 17px Georgia,serif';g.textAlign='center';g.fillText('scratch here',150,140);
+g.strokeStyle='#b98a4a';g.lineWidth=2;heart(g,300,270);g.stroke();
 let down=0,n=0,fin=0;
-const pos=e=>{const b=sk.getBoundingClientRect();return[(e.clientX-b.left)*240/b.width,(e.clientY-b.top)*216/b.height]};
+const pos=e=>{const b=sk.getBoundingClientRect();return[(e.clientX-b.left)*300/b.width,(e.clientY-b.top)*270/b.height]};
 const scr=e=>{if(!down||fin)return;const[x,y]=pos(e);g.globalCompositeOperation='destination-out';g.beginPath();g.arc(x,y,17,0,7);g.fill();
- if(++n%8==0){const d=g.getImageData(0,0,240,216).data;let c=0,t=0;for(let i=3;i<d.length;i+=64){t++;if(d[i]<40)c++}
+ if(++n%8==0){const d=g.getImageData(0,0,300,270).data;let c=0,t=0;for(let i=3;i<d.length;i+=64){t++;if(d[i]<40)c++}
   if(c/t>.34){fin=1;$('#sc').classList.add('done');shower(80);navigator.vibrate&&navigator.vibrate(60)}}};
 sk.addEventListener('pointerdown',e=>{down=1;sk.setPointerCapture(e.pointerId);scr(e)});
 sk.addEventListener('pointermove',scr);addEventListener('pointerup',()=>down=0);
